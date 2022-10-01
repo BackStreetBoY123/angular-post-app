@@ -1,6 +1,9 @@
 <div class="container">
   <div class="row text-center mt-4">
     <div class="col-12">
+      <div *ngIf="posts.message" >
+        Data Not Available
+      </div>
       <h3>
         {{posts.title}}
       </h3>

@@ -20,8 +20,7 @@ export class PostComponent implements OnInit {
 
     this.http.get(`https://jsonplaceholder.typicode.com/posts/${this.id}`).subscribe((data)=>{
        this.posts = data;
-       console.log(this.posts,"this pists")
-    });
+    }, (error) => {this.posts = error ;console.log(error.message)});
 
   }
 }
