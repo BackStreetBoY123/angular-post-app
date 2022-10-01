@@ -1,0 +1,23 @@
+<div class="container">
+  <div class="row pt-5 pb-4">
+    <div class="col-12">
+      <h1 class="text-center"> Awesome Contact Page ..</h1>
+    </div>
+  </div>
+  <div class="row pb-3">
+    <div class="col-md-6 mx-auto">
+      <form [formGroup]="formdata" (ngSubmit)="onClickSubmit(formdata.value)" >
+        <div class="mb-3">
+          <input type="email" placeholder="Enter Email" class="form-control" name="email" formControlName = "email">
+        </div>
+        <div class="mb-3">
+          <input type="password" placeholder="Enter Password" class="form-control" name="password" formControlName="password">
+        </div>
+        <button type="submit" class="mx-auto  d-block btn btn-primary">Submit</button>
+        <p> Email is: {{email}} </p>
+        <p> Password is: {{password}} </p>
+
+      </form>
+    </div>
+  </div>
+</div>
